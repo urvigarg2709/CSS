@@ -1,0 +1,27 @@
+/* p{
+    position: static;
+} */
+div{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+#box3{
+    position:absolute;
+    top: 150px;
+
+}
+/* #box1{
+    position: fixed;
+} */
+.wrapper{
+    height: 2000px;
+    background-color: yellow;
+    width: 100vw;
+}
+#box4{
+    position: sticky;
+    top: 0px;
+}
