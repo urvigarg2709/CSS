@@ -3,12 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-#wrapper{
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+.wrapper{
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 10px;
+    
+
 }
+
 .container{
     position: relative;
     display: flex;
@@ -16,38 +20,48 @@
     align-items: center;
     height: 100%;
     transform-style: preserve-3d;
-    z-index: -1;
+    z-index: -1;/*this is used for overlapping ki konsi cheese kiske upar aane vaali hai*/
 }
+
+.background,.foreground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;/*fit image in container*/
+}
+
 .background{
-    transform: translatez(-40px) scale(5);
+    transform: translateZ(-40px) scale(5);
 }
 .foreground{
-    transform:translatez(-20px) scale(3);
+    transform: translateZ(-20px) scale(3);
 }
-.background,.foreground{
-    position:absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    object-fit: cover;
-}
+
 h1{
     position: absolute;
     top: 5rem;
-    letter-spacing: 4px;
-    font-size: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size:10rem;
     color: white;
+    letter-spacing: 4px;
     text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    font-family: 'Roboto Slab', serif;
+
 }
+
 section{
     background-color: rgb(45,45,45);
     color: white;
-    padding: 5rem;
+    padding: 5rem 0;
 }
-.secheading{
+
+.secHeading{
     font-size: 5rem;
     padding: 0 10rem;
 }
+
 .text{
     font-size: 1.5rem;
     padding: 0 10rem;
@@ -61,26 +75,26 @@ section{
     background-position: center;
     height: 500px;
 }
+
+.bg1{
+    background-image: url("sport-1.jpg");
+}
+.bg2{
+    background-image: url("sport-2.jpg");
+}
+.bg3{
+    background-image: url("sport-3.jpg");
+}
+
 .desc{
     position: absolute;
     background-color: white;
     padding: 0.5rem 2.5rem;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateX(-50%);
-    transform: translateY(-15%) translateY(-15%);
+    transform: translateX(-50%) translateY(-50%);
     color: black;
     font-size: 3.5rem;
     font-weight: 600;
 
-
-}
-.bg1{
-    background-image: url(sport-1.jpg);
-}
-.bg2{
-    background-image: url(sport-2.jpg);
-}
-.bg3{
-    background-image: url(sport-3.jpg);
 }
